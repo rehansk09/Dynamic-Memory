@@ -1,0 +1,127 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+.memory-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 2px solid black;
+  margin: 0 auto 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.block {
+  position: relative;
+  border: 1px solid gray;
+  margin: 2px 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.allocated {
+  background-color: lightgreen;
+}
+
+.free {
+  background-color: lightgray;
+}
+
+.highlight {
+  animation: highlight 0.7s ease-in-out;
+}
+
+@keyframes highlight {
+  0% {
+      background-color: yellow;
+  }
+  100% {
+      background-color: lightgreen;
+  }
+}
+
+.fit-strategy {
+  position: absolute;
+  right: -120px; 
+  font-size: 16px;
+  text-transform: uppercase;
+  
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.message {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+input[type="number"], select {
+  width: 80%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus, select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+#processSize {
+  width: 60%;
+}
+
+.best-fit {
+  background-color: red;
+  color: white;
+}
+
+.worst-fit {
+  background-color: black;
+  color: white;
+}

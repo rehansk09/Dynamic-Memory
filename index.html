@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Memory Partition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Memory Partitioning</h1>
+    <div class="memory-container" id="memoryDisplay">
+        <!-- Blocks will be displayed here -->
+    </div>
+
+    <form id="allocationForm">
+        <label for="processSize">Process Size (MB):</label>
+        <input type="number" id="processSize" required />
+        <br>
+
+        <label for="strategy">Allocation Strategy:</label>
+        <select id="strategy">
+            <option value="first-fit">First Fit</option>
+            <option value="best-fit">Best Fit</option>
+            <option value="worst-fit">Worst Fit</option>
+        </select>
+        <br>
+
+        <button type="submit">Allocate</button>
+        <button type="button" id="resetButton">Reset</button>
+    </form>
+
+    <div class="message" id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
